@@ -9,6 +9,11 @@ body {
   width: 100%;
 }
 
+body .dark {
+  background-color: #292c35;
+  color:#FFFFFF;
+}
+
 img{
   max-width: 100%;
 }
@@ -32,6 +37,53 @@ img{
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.sun{
+  color:yellow;
+}
+
+.moon{
+  color: pink;
+}
+
+#checkbox{
+  opacity: 0;
+  position: absolute;
+}
+
+.label-checkbox{
+  display: block;
+  width: 70px;
+  height: 30px;
+  background-color: #111;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 20px;
+  overflow: hidden;
+}
+
+
+.ball{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background-color: white;
+  position: absolute;
+  top:0px;
+  transition: 0.5s;
+}
+
+.dark{
+  right:0
+}
+
+.light{
+  left: 0;
 }
 
 .container{
@@ -170,15 +222,6 @@ img{
   font-weight: 600;
 }
 
-.ball{
-  width:20px;
-  height:20px;
-  border-radius:50%;
-  background-color: white;
-  position: absolute;
-  top:2px;
-  left: 2px;
-}
 
 @media (min-width:768px) {
   .experiences{

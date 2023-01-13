@@ -11,9 +11,13 @@ import star from '../images/star.png';
 
 
 
-const Main = ({data}) => {
+const Main = (props) => {
 
     const images = [image1, image2, image3, image4, image5, image6, image7, image8, image9]
+
+    const dark_theme = {
+        color: 'white',
+    }
 
     return(
         <section className='container'>
@@ -27,15 +31,15 @@ const Main = ({data}) => {
                     })
                 }
             </section>
-            <section className="text">
-                    <h1>Online Experiences</h1>
-                    <p>Join unique interactive activities led by one-of-a-kind hosts—all without leaving home.</p>
+            <section className="text" >
+                    <h1 style={props.checkbox ? dark_theme : null}>Online Experiences</h1>
+                    <p style={props.checkbox ? dark_theme : null}>Join unique interactive activities led by one-of-a-kind hosts—all without leaving home.</p>
                 </section>
                 <section className="experiences">
                     {
-                        data.map((experience) => {
+                        props.data.map((experience,index) => {
                             return (
-                                <section className='card'>
+                                <section className='card' key={index}>
                                     <div className="experience-image">
                                         <img src={experience.image} alt="" />
                                         {
